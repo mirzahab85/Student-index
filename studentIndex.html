@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8"/>
+<head>
+<title> Studentski Index </title>
+<style>
+
+#index {
+color:white;
+background-color:brown;
+width: 300px;
+height:300px;
+margin-left:560px;
+margin-top:150px;
+}
+
+#elementi {
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="index">
+<div id="elementi">
+<p> <strong> Broj vašeg indeksa: </strong> </p>
+<input type="number" id="brojIndexa" /> 
+<button style="color:white" onClick="provjera()";>Provjeri </button>
+<p id="ispis"> </p>
+</div>
+</div>
+
+
+<script>
+
+paran = false;
+
+function provjera(){
+
+broj = document.getElementById("brojIndexa").value;
+document.getElementById("ispis").innerHTML = "";
+
+if(broj > 99999) {
+
+if (broj % 2 == 0){
+   document.getElementById("ispis").innerHTML = "Broj vašeg indeksa je paran i ispit radite u 11h";
+   document.getElementById("ispis").style.color = "yellow";
+   }
+else 
+   document.getElementById("ispis").innerHTML = "Broj vašeg indeksa je neparan i ispit radite u 11:30h";
+   document.getElementById("ispis").style.color = "yellow";
+
+}
+
+else {
+   document.getElementById("ispis").innerHTML = "Molimo unesite ispravan broj vašeg indeksa";
+   document.getElementById("ispis").style.color = "yellow";
+}
+
+}
+
+</script>
+</body>
+</html>
