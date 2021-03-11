@@ -1,2 +1,2 @@
 # Student-index
-Studen index HTML,CSS and JavaScript
+Student index HTML,CSS and JavaScript
